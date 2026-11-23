@@ -1,0 +1,32 @@
+{
+  "sectors": {
+    "22": {
+      "lat": 51.42983281,
+      "lon": 6.77272341,
+      "source": "https://www.openstreetmap.org/way/561030290"
+    },
+    "36": {
+      "lat": 51.40694138,
+      "lon": 6.77998903,
+      "source": "https://www.openstreetmap.org/way/24979117"
+    },
+    "38": {
+      "lat": 51.3964426,
+      "lon": 6.78474983,
+      "source": "https://www.openstreetmap.org/way/236790255"
+    },
+    "81": {
+      "lat": 51.4935301,
+      "lon": 6.7737584,
+      "source": "https://www.openstreetmap.org/node/13950502415"
+    }
+  },
+  "pickups": {
+    "2": {
+      "lat": 51.40157431,
+      "lon": 6.76223369,
+      "source": "https://www.openstreetmap.org/way/30041252",
+      "note": "Kartierte Parkfläche neben REWE"
+    }
+  }
+}

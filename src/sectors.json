@@ -1,0 +1,980 @@
+[
+  {
+    "id": 1,
+    "district": "Neuenkamp",
+    "name": "Neuenkamp",
+    "address": "Essenberger Str. / Javastr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4328633,
+      "lon": 6.7274184,
+      "source": "https://www.openstreetmap.org/node/80294139"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 2,
+    "district": "Kasslerfeld",
+    "name": "Kasslerfeld",
+    "address": "Ruhrorter Str. / Auf der Höhe",
+    "radius": 150,
+    "point": {
+      "lat": 51.4411177,
+      "lon": 6.7521062,
+      "source": "https://www.openstreetmap.org/node/79362218"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 3,
+    "district": "Altstadt",
+    "name": "Schwanentor",
+    "address": "Unterstr. / Peterstal",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 4,
+    "district": "Altstadt",
+    "name": "Marientor",
+    "address": "Beekstr. / Alte Rheinstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 5,
+    "district": "Altstadt",
+    "name": "Vulkan",
+    "address": "Vulkanstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 6,
+    "district": "",
+    "name": "Bedarfshalteplatz",
+    "address": "",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Kein Standort angegeben"
+  },
+  {
+    "id": 7,
+    "district": "Hochfeld",
+    "name": "Brückenplatz",
+    "address": "Brückenplatz",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 8,
+    "district": "Dellviertel",
+    "name": "Musfeld",
+    "address": "Musfeldstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 9,
+    "district": "Hochfeld",
+    "name": "Gravelotte",
+    "address": "Wanheimer Str. / Paulusstr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.41802,
+      "lon": 6.7538895,
+      "source": "https://www.openstreetmap.org/node/322033876"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 10,
+    "district": "Hochfeld",
+    "name": "Marienhospital",
+    "address": "Wanheimer Str. 167",
+    "radius": 150,
+    "point": {
+      "lat": 51.4135356,
+      "lon": 6.7532464,
+      "source": "https://www.openstreetmap.org/node/5073426649"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 11,
+    "district": "Hochfeld",
+    "name": "Grunewald",
+    "address": "Grunewaldstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 12,
+    "district": "Hochfeld",
+    "name": "Heerstr.",
+    "address": "Heerstr. / Königgrätzer Str.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4160506,
+      "lon": 6.7607656,
+      "source": "https://www.openstreetmap.org/node/35228793"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 13,
+    "district": "Dellviertel",
+    "name": "Bethesda",
+    "address": "Königgrätzer Str.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4165207,
+      "lon": 6.7619434,
+      "source": "https://www.openstreetmap.org/node/2335015003"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 14,
+    "district": "",
+    "name": "Bedarfshalteplatz",
+    "address": "",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Kein Standort angegeben"
+  },
+  {
+    "id": 15,
+    "district": "Dellviertel",
+    "name": "Vincenz",
+    "address": "Papendelle",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 16,
+    "district": "Altstadt",
+    "name": "Goldstr.",
+    "address": "Friedrich-Wilhelm-Str. / Goldstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 17,
+    "district": "Altstadt",
+    "name": "Sonnenwall",
+    "address": "Friedrich-Wilhelm-Str. / Friedrich-Wilhelm-Platz",
+    "radius": 150,
+    "point": {
+      "lat": 51.4316746,
+      "lon": 6.7615363,
+      "source": "https://www.openstreetmap.org/node/79366990"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 18,
+    "district": "Stadtmitte",
+    "name": "Kaufhof (Horten)",
+    "address": "Friedrich-Wilhelm-Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 19,
+    "district": "",
+    "name": "Bedarfshalteplatz",
+    "address": "",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Kein Standort angegeben"
+  },
+  {
+    "id": 20,
+    "district": "Stadtmitte",
+    "name": "Forum",
+    "address": "Tonhallenstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 21,
+    "district": "Stadtmitte",
+    "name": "Mercator",
+    "address": "Mercatorstr. / Königstr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4317694,
+      "lon": 6.773577,
+      "source": "https://www.openstreetmap.org/node/1813842168"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 22,
+    "district": "Stadtmitte",
+    "name": "Hbf",
+    "address": "Hauptbahnhof",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 23,
+    "district": "",
+    "name": "Bedarfshalteplatz",
+    "address": "",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Kein Standort angegeben"
+  },
+  {
+    "id": 24,
+    "district": "Wasserviertel",
+    "name": "Mercure",
+    "address": "Landfermannstr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4339928,
+      "lon": 6.7713315,
+      "source": "https://www.openstreetmap.org/node/273092788"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 25,
+    "district": "Wasserviertel",
+    "name": "Duisburger Hof",
+    "address": "Landfermannstr. / Neckarstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 26,
+    "district": "Altstadt",
+    "name": "Kuhstr.",
+    "address": "Obermauerstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 27,
+    "district": "Kasslerfeld",
+    "name": "Schifferstr.",
+    "address": "Schifferstr. 200",
+    "radius": 150,
+    "point": {
+      "lat": 51.442105100000006,
+      "lon": 6.77227381,
+      "source": "https://www.openstreetmap.org/way/64442854"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 28,
+    "district": "Duissern",
+    "name": "Küppersmühle",
+    "address": "Philosophenweg",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 29,
+    "district": "Duissern",
+    "name": "Arbeitsamt",
+    "address": "Duissernplatz",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 30,
+    "district": "Duissern",
+    "name": "Rheinischer Hof",
+    "address": "Lutherplatz",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 31,
+    "district": "Duissern",
+    "name": "Zoo",
+    "address": "Mülheimer Str.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4333096,
+      "lon": 6.8052184,
+      "source": "https://www.openstreetmap.org/node/2365997702"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 32,
+    "district": "Neudorf",
+    "name": "Heine",
+    "address": "Sternbuschweg / Händelstr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.426823,
+      "lon": 6.7911988,
+      "source": "https://www.openstreetmap.org/node/80133206"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 33,
+    "district": "Neudorf",
+    "name": "Kolonie",
+    "address": "Koloniestr. / Grabenstr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4221831,
+      "lon": 6.7823364,
+      "source": "https://www.openstreetmap.org/node/75000185"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 34,
+    "district": "Neudorf",
+    "name": "Neudorfer Markt",
+    "address": "Neudorfer Str.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4243974,
+      "lon": 6.7814303,
+      "source": "https://www.openstreetmap.org/node/3661808308"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 35,
+    "district": "",
+    "name": "Bedarfshalteplatz",
+    "address": "",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Kein Standort angegeben"
+  },
+  {
+    "id": 36,
+    "district": "Wedau",
+    "name": "Eisstadion",
+    "address": "Margarethenstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 37,
+    "district": "Wedau",
+    "name": "Wedau",
+    "address": "Wedauer Markt",
+    "radius": 150,
+    "point": {
+      "lat": 51.3920509,
+      "lon": 6.7964323,
+      "source": "https://www.openstreetmap.org/node/6638654367"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 38,
+    "district": "Wedau",
+    "name": "Klinik",
+    "address": "Zu den Rehwiesen",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 39,
+    "district": "Wedau",
+    "name": "Stadion",
+    "address": "Bertaallee",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 40,
+    "district": "Wanheimerort",
+    "name": "Schlenk",
+    "address": "Im Schlenk 1",
+    "radius": 150,
+    "point": {
+      "lat": 51.401432182926825,
+      "lon": 6.76344563902439,
+      "source": "https://www.openstreetmap.org/way/45176474"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 41,
+    "district": "Wanheimerort",
+    "name": "Michaelplatz",
+    "address": "Fischerstr. / Gärtnerstr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4022327,
+      "lon": 6.7591769,
+      "source": "https://www.openstreetmap.org/node/80297948"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 42,
+    "district": "Wanheimerort",
+    "name": "Kaserne",
+    "address": "Düsseldorfer Str. / Neuenhofstr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.3928642,
+      "lon": 6.7589347,
+      "source": "https://www.openstreetmap.org/node/33597306"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 43,
+    "district": "",
+    "name": "Bedarfshalteplatz",
+    "address": "",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Kein Standort angegeben"
+  },
+  {
+    "id": 44,
+    "district": "Wanheim",
+    "name": "Wanheim",
+    "address": "Wanheim Markt",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 45,
+    "district": "Hüttenheim",
+    "name": "Tor 2",
+    "address": "Mündelheimer Str. / Ehinger Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 46,
+    "district": "Huckingen",
+    "name": "Huckingen",
+    "address": "Mündelheimer Str. / Im Wittfeld",
+    "radius": 150,
+    "point": {
+      "lat": 51.3707649,
+      "lon": 6.7495193,
+      "source": "https://www.openstreetmap.org/node/33597033"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 47,
+    "district": "Bucholz",
+    "name": "Sittardsberg",
+    "address": "Altenbrucher Damm / Düsseldorfer Landstr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.3760057,
+      "lon": 6.7592264,
+      "source": "https://www.openstreetmap.org/node/76469726"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 48,
+    "district": "Bucholz",
+    "name": "Münchener",
+    "address": "Münchener Str. / U79 Haltestelle",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 49,
+    "district": "Bucholz",
+    "name": "Unfall",
+    "address": "Grossenbaumer Allee / Lindenstr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.3808556,
+      "lon": 6.7818742,
+      "source": "https://www.openstreetmap.org/node/33598379"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 50,
+    "district": "Grossenbaum",
+    "name": "Grossenbaum",
+    "address": "Grossenbaumer Allee / S-Bahn Haltestelle",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 51,
+    "district": "",
+    "name": "Bedarfshalteplatz",
+    "address": "",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Kein Standort angegeben"
+  },
+  {
+    "id": 52,
+    "district": "Rumeln",
+    "name": "Rumeln",
+    "address": "Rumeln Marktplatz",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 53,
+    "district": "Fiemersheim",
+    "name": "Fiemersheim Bahnhof",
+    "address": "Friemersheim Bahnhof",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 54,
+    "district": "Rheinhausen",
+    "name": "Krefelder",
+    "address": "Krefelder Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 55,
+    "district": "Rheinhausen",
+    "name": "Rheinhausen Sparkasse",
+    "address": "Friedrich Ebert Str. / Lindenallee",
+    "radius": 150,
+    "point": {
+      "lat": 51.3980898,
+      "lon": 6.7108655,
+      "source": "https://www.openstreetmap.org/node/76883010"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 56,
+    "district": "Rheinhausen",
+    "name": "Rheinhausen Markt",
+    "address": "Atroper Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 57,
+    "district": "Rheinhausen",
+    "name": "Johanniter",
+    "address": "Kreuzacker",
+    "radius": 150,
+    "point": {
+      "lat": 51.4127119,
+      "lon": 6.6975251,
+      "source": "https://www.openstreetmap.org/node/12032621617"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 58,
+    "district": "Rheinhausen",
+    "name": "EKZ",
+    "address": "Asterlager Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 60,
+    "district": "Hochheide",
+    "name": "Hochheide Markt",
+    "address": "Moerser Str. / Kirchstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 61,
+    "district": "Baerl",
+    "name": "Baerl",
+    "address": "Geeststr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 62,
+    "district": "Homberg",
+    "name": "Moltkeplatz",
+    "address": "Johannisstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 63,
+    "district": "Ruhrort",
+    "name": "Friedrichsplatz",
+    "address": "Friedrichsplatz",
+    "radius": 150,
+    "point": {
+      "lat": 51.455646,
+      "lon": 6.7350255,
+      "source": "https://www.openstreetmap.org/node/1632002388"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 64,
+    "district": "Laar",
+    "name": "Laar",
+    "address": "Arndtstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 65,
+    "district": "Beeckerwerth",
+    "name": "Beeckerwerth",
+    "address": "Ahrstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 66,
+    "district": "Beeck",
+    "name": "Beeck",
+    "address": "Lehnhofstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 67,
+    "district": "Bruckhausen",
+    "name": "Bruckhausen",
+    "address": "Kaiser-Wilhelm-Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 68,
+    "district": "Beeck",
+    "name": "Lange Kamp",
+    "address": "Ostackerweg",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 70,
+    "district": "Untermeiderich",
+    "name": "Spichernplatz",
+    "address": "Spichernplatz",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 71,
+    "district": "Mittelmeiderich",
+    "name": "Meiderich Post",
+    "address": "Auf dem Damm",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 72,
+    "district": "Mittelmeiderich",
+    "name": "Meiderich Post Nacht",
+    "address": "Auf dem Damm/A59 Brücke",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 73,
+    "district": "Mittelmeiderich",
+    "name": "Meiderich Bahnhof",
+    "address": "Von-der-Mark-Str.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4680011,
+      "lon": 6.7802801,
+      "source": "https://www.openstreetmap.org/node/3077441000"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 74,
+    "district": "Obermeiderich",
+    "name": "Mechmann",
+    "address": "Johannes-Mechmann-Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 75,
+    "district": "Obermeiderich",
+    "name": "Berliner",
+    "address": "Berliner Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 76,
+    "district": "Obermeiderich",
+    "name": "Landschaftspark",
+    "address": "Emscherstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 78,
+    "district": "Hamborn",
+    "name": "Johannes",
+    "address": "An der Abtei",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 79,
+    "district": "Hamborn",
+    "name": "Altmarkt",
+    "address": "Hamborn Altmarkt",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 80,
+    "district": "Hamborn",
+    "name": "Rhein Ruhr Halle",
+    "address": "Walter-Rathenau-Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 81,
+    "district": "Hamborn",
+    "name": "Hamborn Rathaus",
+    "address": "Duisburger Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 82,
+    "district": "Neumühl",
+    "name": "Barbara",
+    "address": "Barbarastr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 83,
+    "district": "Neumühl",
+    "name": "Neumühl",
+    "address": "Lehrerstr.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 84,
+    "district": "Obermarxloh",
+    "name": "Knappen",
+    "address": "Knappenstr. / Kalthoffstr.",
+    "radius": 150,
+    "point": {
+      "lat": 51.4999049,
+      "lon": 6.7832667,
+      "source": "https://www.openstreetmap.org/node/1646484030"
+    },
+    "active": true,
+    "review": null
+  },
+  {
+    "id": 86,
+    "district": "Obermarxloh",
+    "name": "Rubbert Eck",
+    "address": "Obere Holtener Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 87,
+    "district": "Marxloh",
+    "name": "Bebel",
+    "address": "August-Bebel-Platz",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 88,
+    "district": "Marxloh",
+    "name": "Weseler",
+    "address": "Weseler Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 89,
+    "district": "Walsum",
+    "name": "Schwan",
+    "address": "Friedrich-Ebert-Str.",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 90,
+    "district": "Walsum",
+    "name": "Walsum Markt",
+    "address": "Friedrich-Ebert-Str. / Am grünen Ring",
+    "radius": 150,
+    "point": null,
+    "active": false,
+    "review": "Standort prüfen"
+  },
+  {
+    "id": 91,
+    "district": "Walsum",
+    "name": "Franz Lenze",
+    "address": "Franz-Lenze-Platz",
+    "radius": 150,
+    "point": {
+      "lat": 51.53933042,
+      "lon": 6.72141336,
+      "source": "https://www.openstreetmap.org/way/1203405461"
+    },
+    "active": true,
+    "review": null
+  }
+]

@@ -1,0 +1,1111 @@
+[
+  {
+    "id": "1",
+    "name": "HORNBACH Wanheimerort",
+    "address": "Düsseldorfer Straße 400",
+    "point": {
+      "lat": 51.40864380833333,
+      "lon": 6.765568095833333,
+      "source": "https://www.openstreetmap.org/way/1319896933"
+    }
+  },
+  {
+    "id": "2",
+    "name": "REWE Parkplatz Düsseldorfer Str.",
+    "address": "Düsseldorfer Str. 504, 47055 Duisburg",
+    "note": "Die OSM-Adressmarkierung bezeichnet einen Imbiss. Parkplatz prüfen.",
+    "point": null
+  },
+  {
+    "id": "3",
+    "name": "ALDI SÜD",
+    "address": "Kulturstraße 37",
+    "point": {
+      "lat": 51.40732167211539,
+      "lon": 6.7572234375,
+      "source": "https://www.openstreetmap.org/way/38706294"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Netto Marken-Discount",
+    "address": "Kulturstraße 17",
+    "point": {
+      "lat": 51.4071781,
+      "lon": 6.7545762,
+      "source": "https://www.openstreetmap.org/node/14393412848"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Fressnapf",
+    "address": "Rheintörchenstraße 4–6",
+    "note": "Die angegebene Filialadresse ist nicht eindeutig belegt.",
+    "point": null
+  },
+  {
+    "id": "6",
+    "name": "KiK",
+    "address": "Rheintörchenstraße 18",
+    "point": {
+      "lat": 51.3976929,
+      "lon": 6.7530754,
+      "source": "https://www.openstreetmap.org/node/13684497021"
+    }
+  },
+  {
+    "id": "7",
+    "name": "JYSK",
+    "address": "Forststraße 30, südlicher Grenzbereich",
+    "point": {
+      "lat": 51.39547043636364,
+      "lon": 6.750970654545455,
+      "source": "https://www.openstreetmap.org/way/35316785"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Adlerstraße",
+    "address": "Adlerstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3994352,
+      "lon": 6.7643338,
+      "source": "https://www.openstreetmap.org/node/12178461473"
+    }
+  },
+  {
+    "id": "9",
+    "name": "Adolf-Wagner-Straße",
+    "address": "Adolf-Wagner-Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4076389,
+      "lon": 6.7709515,
+      "source": "https://www.openstreetmap.org/node/253767662"
+    }
+  },
+  {
+    "id": "10",
+    "name": "Ahornstraße",
+    "address": "Ahornstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4016998,
+      "lon": 6.7686548,
+      "source": "https://www.openstreetmap.org/node/110160281"
+    }
+  },
+  {
+    "id": "11",
+    "name": "Alfrediplatz",
+    "address": "Alfrediplatz",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4088516,
+      "lon": 6.7767333,
+      "source": "https://www.openstreetmap.org/node/205328947"
+    }
+  },
+  {
+    "id": "12",
+    "name": "Alter Kalkweg",
+    "address": "Alter Kalkweg",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4097832,
+      "lon": 6.7736898,
+      "source": "https://www.openstreetmap.org/node/354628729"
+    }
+  },
+  {
+    "id": "13",
+    "name": "Am Bahndamm",
+    "address": "Am Bahndamm",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4078945,
+      "lon": 6.7735269,
+      "source": "https://www.openstreetmap.org/node/354628862"
+    }
+  },
+  {
+    "id": "14",
+    "name": "Am Buchenhain",
+    "address": "Am Buchenhain",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3999762,
+      "lon": 6.7827296,
+      "source": "https://www.openstreetmap.org/node/368244686"
+    }
+  },
+  {
+    "id": "15",
+    "name": "Am Schützenhaus",
+    "address": "Am Schützenhaus",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4054097,
+      "lon": 6.7761833,
+      "source": "https://www.openstreetmap.org/node/417287304"
+    }
+  },
+  {
+    "id": "16",
+    "name": "Am Tannenhof",
+    "address": "Am Tannenhof",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3975202,
+      "lon": 6.7819107,
+      "source": "https://www.openstreetmap.org/node/368244688"
+    }
+  },
+  {
+    "id": "17",
+    "name": "Amselstraße",
+    "address": "Amselstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3979711,
+      "lon": 6.7635494,
+      "source": "https://www.openstreetmap.org/node/110201779"
+    }
+  },
+  {
+    "id": "18",
+    "name": "Berlepschstraße",
+    "address": "Berlepschstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4064684,
+      "lon": 6.7666199,
+      "source": "https://www.openstreetmap.org/node/2463735348"
+    }
+  },
+  {
+    "id": "19",
+    "name": "Bienenpfad",
+    "address": "Bienenpfad",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4021959,
+      "lon": 6.7788339,
+      "source": "https://www.openstreetmap.org/node/417295826"
+    }
+  },
+  {
+    "id": "20",
+    "name": "Birkenstraße",
+    "address": "Birkenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4024674,
+      "lon": 6.7702799,
+      "source": "https://www.openstreetmap.org/node/110154176"
+    }
+  },
+  {
+    "id": "21",
+    "name": "Bodelschwinghstraße",
+    "address": "Bodelschwinghstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4075889,
+      "lon": 6.7693959,
+      "source": "https://www.openstreetmap.org/node/253767660"
+    }
+  },
+  {
+    "id": "22",
+    "name": "Buchenstraße",
+    "address": "Buchenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4024674,
+      "lon": 6.7702799,
+      "source": "https://www.openstreetmap.org/node/110154176"
+    }
+  },
+  {
+    "id": "23",
+    "name": "Buchholzstraße",
+    "address": "Buchholzstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4041698,
+      "lon": 6.7711487,
+      "source": "https://www.openstreetmap.org/node/110142370"
+    }
+  },
+  {
+    "id": "24",
+    "name": "Bussardstraße",
+    "address": "Bussardstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4033602,
+      "lon": 6.7664828,
+      "source": "https://www.openstreetmap.org/node/12633434343"
+    }
+  },
+  {
+    "id": "25",
+    "name": "Calvinstraße",
+    "address": "Calvinstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3989226,
+      "lon": 6.7573907,
+      "source": "https://www.openstreetmap.org/node/440773751"
+    }
+  },
+  {
+    "id": "26",
+    "name": "Dachsstraße",
+    "address": "Dachsstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4014785,
+      "lon": 6.7491008,
+      "source": "https://www.openstreetmap.org/node/440772072"
+    }
+  },
+  {
+    "id": "27",
+    "name": "Damaschkestraße",
+    "address": "Damaschkestraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4075889,
+      "lon": 6.7693959,
+      "source": "https://www.openstreetmap.org/node/253767660"
+    }
+  },
+  {
+    "id": "28",
+    "name": "Diepenbrocker Weg",
+    "address": "Diepenbrocker Weg",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4011721,
+      "lon": 6.774664,
+      "source": "https://www.openstreetmap.org/node/446772733"
+    }
+  },
+  {
+    "id": "29",
+    "name": "Dornstraße",
+    "address": "Dornstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4016296,
+      "lon": 6.7718933,
+      "source": "https://www.openstreetmap.org/node/14368784793"
+    }
+  },
+  {
+    "id": "30",
+    "name": "Drosselstraße",
+    "address": "Drosselstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3979299,
+      "lon": 6.7652056,
+      "source": "https://www.openstreetmap.org/node/110201803"
+    }
+  },
+  {
+    "id": "31",
+    "name": "Düsseldorfer Straße",
+    "address": "Düsseldorfer Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.403512,
+      "lon": 6.7636297,
+      "source": "https://www.openstreetmap.org/node/1399708175"
+    }
+  },
+  {
+    "id": "32",
+    "name": "Eberstraße",
+    "address": "Eberstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4012252,
+      "lon": 6.7552698,
+      "source": "https://www.openstreetmap.org/node/357145843"
+    }
+  },
+  {
+    "id": "33",
+    "name": "Eichhornstraße",
+    "address": "Eichhornstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4009793,
+      "lon": 6.7510854,
+      "source": "https://www.openstreetmap.org/node/357146228"
+    }
+  },
+  {
+    "id": "34",
+    "name": "Elsterstraße",
+    "address": "Elsterstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4015456,
+      "lon": 6.7527592,
+      "source": "https://www.openstreetmap.org/node/313736684"
+    }
+  },
+  {
+    "id": "35",
+    "name": "Erlenstraße",
+    "address": "Erlenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4028712,
+      "lon": 6.7583412,
+      "source": "https://www.openstreetmap.org/node/315339069"
+    }
+  },
+  {
+    "id": "36",
+    "name": "Eschenstraße",
+    "address": "Eschenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3971202,
+      "lon": 6.7536114,
+      "source": "https://www.openstreetmap.org/node/322081783"
+    }
+  },
+  {
+    "id": "37",
+    "name": "Eulenstraße",
+    "address": "Eulenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3994471,
+      "lon": 6.7635923,
+      "source": "https://www.openstreetmap.org/node/110201873"
+    }
+  },
+  {
+    "id": "38",
+    "name": "Fasanenstraße",
+    "address": "Fasanenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3985576,
+      "lon": 6.7663405,
+      "source": "https://www.openstreetmap.org/node/110201756"
+    }
+  },
+  {
+    "id": "39",
+    "name": "Fischerstraße",
+    "address": "Fischerstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4023579,
+      "lon": 6.7567694,
+      "source": "https://www.openstreetmap.org/node/315340184"
+    }
+  },
+  {
+    "id": "40",
+    "name": "Fliederstraße",
+    "address": "Fliederstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4023579,
+      "lon": 6.7567694,
+      "source": "https://www.openstreetmap.org/node/315340184"
+    }
+  },
+  {
+    "id": "41",
+    "name": "Forststraße",
+    "address": "Forststraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3930425,
+      "lon": 6.7584088,
+      "source": "https://www.openstreetmap.org/node/33597790"
+    }
+  },
+  {
+    "id": "42",
+    "name": "Friedrich-Naumann-Straße",
+    "address": "Friedrich-Naumann-Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4059998,
+      "lon": 6.7703511,
+      "source": "https://www.openstreetmap.org/node/253768858"
+    }
+  },
+  {
+    "id": "43",
+    "name": "Fuchsstraße",
+    "address": "Fuchsstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3997728,
+      "lon": 6.7600106,
+      "source": "https://www.openstreetmap.org/node/283315535"
+    }
+  },
+  {
+    "id": "44",
+    "name": "Gärtnerstraße",
+    "address": "Gärtnerstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3974927,
+      "lon": 6.7584675,
+      "source": "https://www.openstreetmap.org/node/283315487"
+    }
+  },
+  {
+    "id": "45",
+    "name": "Gießingstraße",
+    "address": "Gießingstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4096142,
+      "lon": 6.764108,
+      "source": "https://www.openstreetmap.org/node/2420527361"
+    }
+  },
+  {
+    "id": "46",
+    "name": "Ginsterstraße",
+    "address": "Ginsterstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4049951,
+      "lon": 6.7700949,
+      "source": "https://www.openstreetmap.org/node/2426183708"
+    }
+  },
+  {
+    "id": "47",
+    "name": "Glaserstraße",
+    "address": "Glaserstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4046021,
+      "lon": 6.7517507,
+      "source": "https://www.openstreetmap.org/node/357146521"
+    }
+  },
+  {
+    "id": "48",
+    "name": "Grüner Weg",
+    "address": "Grüner Weg",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3982687,
+      "lon": 6.7881576,
+      "source": "https://www.openstreetmap.org/node/745929558"
+    }
+  },
+  {
+    "id": "49",
+    "name": "Habichtstraße",
+    "address": "Habichtstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3994471,
+      "lon": 6.7635923,
+      "source": "https://www.openstreetmap.org/node/110201873"
+    }
+  },
+  {
+    "id": "50",
+    "name": "Hermann-Löns-Weg",
+    "address": "Hermann-Löns-Weg",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4000408,
+      "lon": 6.7798927,
+      "source": "https://www.openstreetmap.org/node/368244683"
+    }
+  },
+  {
+    "id": "51",
+    "name": "Hitzestraße",
+    "address": "Hitzestraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.396934,
+      "lon": 6.7571514,
+      "source": "https://www.openstreetmap.org/node/2446218699"
+    }
+  },
+  {
+    "id": "52",
+    "name": "Holunderstraße",
+    "address": "Holunderstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.404742,
+      "lon": 6.7665755,
+      "source": "https://www.openstreetmap.org/node/12633424404"
+    }
+  },
+  {
+    "id": "53",
+    "name": "Hultschiner Straße",
+    "address": "Hultschiner Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.402142,
+      "lon": 6.7606575,
+      "source": "https://www.openstreetmap.org/node/33597823"
+    }
+  },
+  {
+    "id": "54",
+    "name": "Hummelpfad",
+    "address": "Hummelpfad",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4024828,
+      "lon": 6.7765999,
+      "source": "https://www.openstreetmap.org/node/417295823"
+    }
+  },
+  {
+    "id": "55",
+    "name": "Im Baumhof",
+    "address": "Im Baumhof",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3988327,
+      "lon": 6.769937,
+      "source": "https://www.openstreetmap.org/node/2447191051"
+    }
+  },
+  {
+    "id": "56",
+    "name": "Im Hagen",
+    "address": "Im Hagen",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.399118,
+      "lon": 6.7705314,
+      "source": "https://www.openstreetmap.org/node/2447191060"
+    }
+  },
+  {
+    "id": "57",
+    "name": "Im Hort",
+    "address": "Im Hort",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4001418,
+      "lon": 6.7719631,
+      "source": "https://www.openstreetmap.org/node/2426195863"
+    }
+  },
+  {
+    "id": "58",
+    "name": "Im Schlenk",
+    "address": "Im Schlenk",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4017472,
+      "lon": 6.7760672,
+      "source": "https://www.openstreetmap.org/node/2447574437"
+    }
+  },
+  {
+    "id": "59",
+    "name": "Im Siepen",
+    "address": "Im Siepen",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4000944,
+      "lon": 6.7707282,
+      "source": "https://www.openstreetmap.org/node/110174139"
+    }
+  },
+  {
+    "id": "60",
+    "name": "Im Vogelsang",
+    "address": "Im Vogelsang",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3997132,
+      "lon": 6.7688087,
+      "source": "https://www.openstreetmap.org/node/110174078"
+    }
+  },
+  {
+    "id": "61",
+    "name": "Im Waldfrieden",
+    "address": "Im Waldfrieden",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3984371,
+      "lon": 6.7688197,
+      "source": "https://www.openstreetmap.org/node/110174068"
+    }
+  },
+  {
+    "id": "62",
+    "name": "Kalkweg",
+    "address": "Kalkweg",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4060646,
+      "lon": 6.7771053,
+      "source": "https://www.openstreetmap.org/node/2409856963"
+    }
+  },
+  {
+    "id": "63",
+    "name": "Kaufstraße",
+    "address": "Kaufstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3990108,
+      "lon": 6.7527404,
+      "source": "https://www.openstreetmap.org/node/357142780"
+    }
+  },
+  {
+    "id": "64",
+    "name": "Kiebitzstraße",
+    "address": "Kiebitzstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3979712,
+      "lon": 6.7624193,
+      "source": "https://www.openstreetmap.org/node/110201767"
+    }
+  },
+  {
+    "id": "65",
+    "name": "Kranichstraße",
+    "address": "Kranichstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4016377,
+      "lon": 6.7640896,
+      "source": "https://www.openstreetmap.org/node/11220225049"
+    }
+  },
+  {
+    "id": "66",
+    "name": "Kulmer Straße",
+    "address": "Kulmer Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.405206,
+      "lon": 6.7633592,
+      "source": "https://www.openstreetmap.org/node/2445708814"
+    }
+  },
+  {
+    "id": "67",
+    "name": "Kulturstraße",
+    "address": "Kulturstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4063395,
+      "lon": 6.7626947,
+      "source": "https://www.openstreetmap.org/node/2420525693"
+    }
+  },
+  {
+    "id": "68",
+    "name": "Lintorfer Straße",
+    "address": "Lintorfer Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4007384,
+      "lon": 6.7777234,
+      "source": "https://www.openstreetmap.org/node/417285193"
+    }
+  },
+  {
+    "id": "69",
+    "name": "Lönsweg",
+    "address": "Lönsweg",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3986512,
+      "lon": 6.7758805,
+      "source": "https://www.openstreetmap.org/node/368242976"
+    }
+  },
+  {
+    "id": "70",
+    "name": "Mallinckrodtstraße",
+    "address": "Mallinckrodtstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3945738,
+      "lon": 6.7556276,
+      "source": "https://www.openstreetmap.org/node/349094076"
+    }
+  },
+  {
+    "id": "71",
+    "name": "Markusstraße",
+    "address": "Markusstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4023547,
+      "lon": 6.7596246,
+      "source": "https://www.openstreetmap.org/node/315339036"
+    }
+  },
+  {
+    "id": "72",
+    "name": "Max-Brandts-Straße",
+    "address": "Max-Brandts-Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.407559,
+      "lon": 6.768631,
+      "source": "https://www.openstreetmap.org/node/253767654"
+    }
+  },
+  {
+    "id": "73",
+    "name": "Meisenstraße",
+    "address": "Meisenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3979143,
+      "lon": 6.7662717,
+      "source": "https://www.openstreetmap.org/node/110201817"
+    }
+  },
+  {
+    "id": "74",
+    "name": "Melanchthonplatz",
+    "address": "Melanchthonplatz",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3983043,
+      "lon": 6.7561802,
+      "source": "https://www.openstreetmap.org/node/440773747"
+    }
+  },
+  {
+    "id": "75",
+    "name": "Michaelplatz",
+    "address": "Michaelplatz",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4028032,
+      "lon": 6.7596859,
+      "source": "https://www.openstreetmap.org/node/315339035"
+    }
+  },
+  {
+    "id": "76",
+    "name": "Michaelstraße",
+    "address": "Michaelstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4030964,
+      "lon": 6.7597297,
+      "source": "https://www.openstreetmap.org/node/315339034"
+    }
+  },
+  {
+    "id": "77",
+    "name": "Nikolaistraße",
+    "address": "Nikolaistraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4041139,
+      "lon": 6.7639936,
+      "source": "https://www.openstreetmap.org/node/291216149"
+    }
+  },
+  {
+    "id": "78",
+    "name": "Paul-Gerhardt-Straße",
+    "address": "Paul-Gerhardt-Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3989761,
+      "lon": 6.756269,
+      "source": "https://www.openstreetmap.org/node/440773746"
+    }
+  },
+  {
+    "id": "79",
+    "name": "Platanenstraße",
+    "address": "Platanenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4045941,
+      "lon": 6.7710037,
+      "source": "https://www.openstreetmap.org/node/6543563232"
+    }
+  },
+  {
+    "id": "80",
+    "name": "Pollmannstraße",
+    "address": "Pollmannstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3940655,
+      "lon": 6.7579804,
+      "source": "https://www.openstreetmap.org/node/349093256"
+    }
+  },
+  {
+    "id": "81",
+    "name": "Posadowskyplatz",
+    "address": "Posadowskyplatz",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4060227,
+      "lon": 6.7679122,
+      "source": "https://www.openstreetmap.org/node/2446002711"
+    }
+  },
+  {
+    "id": "82",
+    "name": "Posener Straße",
+    "address": "Posener Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4050196,
+      "lon": 6.7633323,
+      "source": "https://www.openstreetmap.org/node/904418770"
+    }
+  },
+  {
+    "id": "83",
+    "name": "Rheintörchenstraße",
+    "address": "Rheintörchenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3978429,
+      "lon": 6.7522011,
+      "source": "https://www.openstreetmap.org/node/313736483"
+    }
+  },
+  {
+    "id": "84",
+    "name": "Schlosserstraße",
+    "address": "Schlosserstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4049753,
+      "lon": 6.7526716,
+      "source": "https://www.openstreetmap.org/node/2445542886"
+    }
+  },
+  {
+    "id": "85",
+    "name": "Schmiedestraße",
+    "address": "Schmiedestraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4031677,
+      "lon": 6.7544292,
+      "source": "https://www.openstreetmap.org/node/3005416634"
+    }
+  },
+  {
+    "id": "86",
+    "name": "Schmollerstraße",
+    "address": "Schmollerstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4067929,
+      "lon": 6.7710276,
+      "source": "https://www.openstreetmap.org/node/253768856"
+    }
+  },
+  {
+    "id": "87",
+    "name": "Sebastianstraße",
+    "address": "Sebastianstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4033827,
+      "lon": 6.7786474,
+      "source": "https://www.openstreetmap.org/node/33597835"
+    }
+  },
+  {
+    "id": "88",
+    "name": "Sperberstraße",
+    "address": "Sperberstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4001698,
+      "lon": 6.7654289,
+      "source": "https://www.openstreetmap.org/node/2315061864"
+    }
+  },
+  {
+    "id": "89",
+    "name": "Sperlingsgasse",
+    "address": "Sperlingsgasse",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4004415,
+      "lon": 6.7634492,
+      "source": "https://www.openstreetmap.org/node/110201843"
+    }
+  },
+  {
+    "id": "90",
+    "name": "Sternstraße",
+    "address": "Sternstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3904161,
+      "lon": 6.7751644,
+      "source": "https://www.openstreetmap.org/node/33598372"
+    }
+  },
+  {
+    "id": "91",
+    "name": "Tannenstraße",
+    "address": "Tannenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4024731,
+      "lon": 6.7694707,
+      "source": "https://www.openstreetmap.org/node/110154152"
+    }
+  },
+  {
+    "id": "92",
+    "name": "Thorner Straße",
+    "address": "Thorner Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.40528,
+      "lon": 6.7620077,
+      "source": "https://www.openstreetmap.org/node/2445708828"
+    }
+  },
+  {
+    "id": "93",
+    "name": "Ulmenstraße",
+    "address": "Ulmenstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4016104,
+      "lon": 6.7718931,
+      "source": "https://www.openstreetmap.org/node/110154199"
+    }
+  },
+  {
+    "id": "94",
+    "name": "Vogelsangplatz",
+    "address": "Vogelsangplatz",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4000897,
+      "lon": 6.769673,
+      "source": "https://www.openstreetmap.org/node/110174118"
+    }
+  },
+  {
+    "id": "95",
+    "name": "Von-Spee-Straße",
+    "address": "Von-Spee-Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3952271,
+      "lon": 6.7545663,
+      "source": "https://www.openstreetmap.org/node/349093602"
+    }
+  },
+  {
+    "id": "96",
+    "name": "Wacholderstraße",
+    "address": "Wacholderstraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4051401,
+      "lon": 6.7697317,
+      "source": "https://www.openstreetmap.org/node/2426195858"
+    }
+  },
+  {
+    "id": "97",
+    "name": "Wanheimer Straße",
+    "address": "Wanheimer Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.4085272,
+      "lon": 6.7516239,
+      "source": "https://www.openstreetmap.org/node/11495619925"
+    }
+  },
+  {
+    "id": "98",
+    "name": "Wedauer Straße",
+    "address": "Wedauer Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3904161,
+      "lon": 6.7751644,
+      "source": "https://www.openstreetmap.org/node/33598372"
+    }
+  },
+  {
+    "id": "99",
+    "name": "Wilhelm-Ketteler-Straße",
+    "address": "Wilhelm-Ketteler-Straße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.405955,
+      "lon": 6.7695864,
+      "source": "https://www.openstreetmap.org/node/253769383"
+    }
+  },
+  {
+    "id": "100",
+    "name": "Windthorststraße",
+    "address": "Windthorststraße",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3948135,
+      "lon": 6.7580867,
+      "source": "https://www.openstreetmap.org/node/438087646"
+    }
+  },
+  {
+    "id": "101",
+    "name": "Zu den Rehwiesen",
+    "address": "Zu den Rehwiesen",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3972156,
+      "lon": 6.7811975,
+      "source": "https://www.openstreetmap.org/node/292830209"
+    }
+  },
+  {
+    "id": "102",
+    "name": "Zum Lith",
+    "address": "Zum Lith",
+    "note": "Straßenabschnitt aus OpenStreetMap",
+    "point": {
+      "lat": 51.3990187,
+      "lon": 6.7676229,
+      "source": "https://www.openstreetmap.org/node/2317623988"
+    }
+  }
+]
