@@ -65,7 +65,17 @@ export default function Preferences({d,tutorial,logout}:{d:Dispatch;tutorial:()=
       </Panel>
       <Panel title="Aufträge">
         <Toggle label="Automatische lokale Angebote" checked={s.auto} onChange={setting('auto')}/>
-        <NumberField label="Auftragsintervall in Sekunden" value={s.interval} min={30} max={900} onChange={setting('interval')}/>
+        <Choice label="Zeit zwischen Auftragsangeboten" value={s.intervalMin===undefined?'legacy':s.intervalMin+'-'+s.intervalMax}
+          options={[
+            ['legacy','Bisherige Einstellung ('+s.interval+' Sekunden)'],
+            ['10-20','10–20 Sekunden'],['20-60','20–60 Sekunden'],['60-120','1–2 Minuten'],
+            ['120-300','2–5 Minuten'],['300-600','5–10 Minuten'],
+          ]} onChange={value=>{
+            if(value==='legacy'){d.settings({intervalMin:undefined,intervalMax:undefined});return;}
+            const [intervalMin,intervalMax]=value.split('-').map(Number);
+            d.settings({intervalMin,intervalMax});
+          }}/>
+        <p className="subtle">Bei jedem freien Wartezyklus wird ein neuer Abstand innerhalb der Zeitspanne gewählt. GPS- und Anfahrtsfilter gelten weiterhin.</p>
         <Toggle label="Aufträge nach Entfernung filtern" checked={s.filter} onChange={setting('filter')}/>
         <NumberField label="Maximale Anfahrtszeit in Minuten" value={s.maxMin} min={2} max={20} onChange={setting('maxMin')}/>
         <Toggle label="Auftragssounds" checked={s.orderSound} onChange={setting('orderSound')}/>
@@ -77,6 +87,7 @@ export default function Preferences({d,tutorial,logout}:{d:Dispatch;tutorial:()=
       </Panel>
       <Panel title="Navigation" id="navigation" open={hash==='#navigation'}>
         <Choice label="Standardnavigation" value={s.navigation} options={[[ 'intern','Intern'],['google','Google Maps']]} onChange={setting('navigation')}/>
+        <Toggle label="Gesprochene Abbiegehinweise" checked={s.voice} onChange={setting('voice')}/>
         <Toggle label="Online-Routing freigeben" checked={s.routing} onChange={setting('routing')}/>
         <p className="subtle">Für Straßenrouten und den Anfahrtsfilter werden Start und Ziel an den gewählten Routingdienst übertragen. Der kostenlose FOSSGIS-Dienst ist für einzelne Testanfragen vorgesehen.</p>
         <label className="field">Eigener OSRM-Endpunkt (optional)<input type="url" defaultValue={s.routingUrl} placeholder={demoRouting} onBlur={e=>{
@@ -113,7 +124,7 @@ export default function Preferences({d,tutorial,logout}:{d:Dispatch;tutorial:()=
         <button className="button" onClick={logout}>Fahrer wechseln</button>
       </Panel>
       <Panel title="System">
-        <p>Version 1.0.0 · {d.online?'Online':'Offline'}</p>
+        <p>Version 1.1.0 · {d.online?'Online':'Offline'}</p>
         <button className="button" onClick={tutorial}><CircleHelp size={18}/> Tutorial starten</button>
         <button className="button" onClick={exportData}><Download size={18}/> Daten exportieren</button>
         <label className="button file-picker"><Upload size={18}/> Daten importieren<input type="file" accept="application/json,.json" onChange={async e=>{

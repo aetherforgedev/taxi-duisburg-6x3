@@ -26,7 +26,12 @@ export const pickups: Pickup[] = (pickupData as Pickup[]).map(pickup => ({
   note:verified.pickups[pickup.id]?.note ?? pickup.note,
 }));
 
-const step = coords.extend({label:z.string(), distance:z.number().nonnegative()});
+const step = coords.extend({
+  label:z.string(), distance:z.number().nonnegative(), duration:z.number().nonnegative().optional(),
+  type:z.string().optional(), modifier:z.string().optional(), street:z.string().optional(),
+  exit:z.number().optional(), offset:z.number().optional(),
+  lanes:z.array(z.object({valid:z.boolean(),indications:z.array(z.string())})).optional(),
+});
 const route = z.object({distance:z.number().nonnegative(), duration:z.number().nonnegative(), points:z.array(coords).min(2), steps:z.array(step)});
 export type Route = z.infer<typeof route>;
 const stop = z.object({label:z.string(), point:place});
@@ -72,13 +77,15 @@ export const cityTariff: Tariff = {base:490, day:40, night:37.04, wait:10.91, in
 export const clearMeter = ():Meter => ({status:'frei',start:0,end:0,wait:0,metres:0,units:0,extra:0,tariff:cityTariff,mode:'auto',vehicle:'standard',last:null,gap:false,orderId:null});
 const settings = z.object({
   idle:z.boolean(), idleSec:z.number().int().min(30).max(600), theme:z.enum(['dunkel','hell','system']),
-  radius:z.number().min(30).max(500), autoOut:z.boolean(), auto:z.boolean(), interval:z.number().min(30).max(900),
+  radius:z.number().min(30).max(500), autoOut:z.boolean(), auto:z.boolean(), interval:z.number().min(10).max(900),
+  intervalMin:z.number().min(10).max(900).optional(), intervalMax:z.number().min(10).max(900).optional(),
+  voice:z.boolean().default(true),
   filter:z.boolean(), maxMin:z.number().min(2).max(20), orderSound:z.boolean(), meterSound:z.boolean(),
   navigation:z.enum(['intern','google']), routing:z.boolean(), routingUrl:z.string().max(300),
   tariff, tariffMode:meterSchema.shape.mode, vehicle:meterSchema.shape.vehicle,
 });
 export const defaults: z.infer<typeof settings> = {
-  idle:true,idleSec:60,theme:'dunkel',radius:150,autoOut:true,auto:true,interval:90,filter:true,maxMin:5,
+  idle:true,idleSec:60,theme:'dunkel',radius:150,autoOut:true,auto:true,interval:90,intervalMin:60,intervalMax:120,voice:true,filter:true,maxMin:5,
   orderSound:true,meterSound:true,navigation:'intern',routing:false,routingUrl:'',
   tariff:cityTariff,tariffMode:'auto',vehicle:'standard',
 };

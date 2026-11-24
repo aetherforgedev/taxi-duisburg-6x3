@@ -3,7 +3,9 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { Activity, ArrowRight, CarFront, ChevronRight, CircleHelp, ClipboardList, Crosshair, Delete, Gauge, House, MapPin, Menu, Navigation, Pause, Play, Radio, UserRound, X } from 'lucide-react';
 import StreetMap from './Map';
 import Preferences from './Preferences';
-import { activeTariff, available, canBook, cents, deadline, distance, driverStatus, duration, euro, idleAllowed, metresLabel, nearRoute, orderLabels, profile, sectors, selectDriver, type Order, type Route } from './domain';
+import LiveNavigation from './LiveNavigation';
+import { offerDelay } from './navigation';
+import { activeTariff, available, canBook, cents, deadline, distance, driverStatus, duration, euro, idleAllowed, metresLabel, orderLabels, profile, sectors, selectDriver, type Order } from './domain';
 import { googleMaps, unlockAudio } from './services';
 import { useDispatch, type Dispatch } from './useDispatch';
 
@@ -143,17 +145,11 @@ export default function App(){
   const [reason,setReason]=useState('');
   const [historyJob,setHistoryJob]=useState<Order|null>(null);
   const [nav,setNav]=useState(false);
-  const [navTarget,setNavTarget]=useState<'abholung'|'ziel'|null>(null);
-  const [route,setRoute]=useState<Route|null>(null);
-  const [routeError,setRouteError]=useState('');
-  const [activeStep,setActiveStep]=useState(0);
-  const [routeRetry,setRouteRetry]=useState(0);
-  const routeTick=useRef(0);
   const tutorial=s.tutorial ? tutorialSteps[s.tutorial-1] : null;
   const offer=s.active?.status==='angeboten'?s.active:null;
   const job=s.active?.status!=='angeboten'?s.active:null;
   const selected=sectors.find(item=>item.id===sectorId);
-  const target=job&&(navTarget==='ziel'||(!navTarget&&job.status==='besetzt')) ? job.destination??job.pickup : job?.pickup;
+  const target=job?.status==='besetzt' ? job.destination??job.pickup : job?.pickup;
   const tutorialAnchor=(tutorial&&tutorial[1])||undefined;
   const overlay=!!(offer||selected||cancel||tutorial||historyJob);
   const conditions=useRef({overlay,nav});
@@ -171,9 +167,8 @@ export default function App(){
     if(d.ready&&tutorial)navigate(tutorial[0]);
   },[d.ready,s.tutorial,navigate]);
   useEffect(()=>{
-    if(!job){setNav(false);setRoute(null);setCancel(false);}
+    if(!job){setNav(false);setCancel(false);}
   },[job?.id]);
-  useEffect(()=>setNavTarget(null),[job?.status]);
   useEffect(()=>{
     if (!s.settings.idle || !idleAllowed(s.session,nav,overlay) || !d.visible) return;
     let timer:number;
@@ -189,38 +184,18 @@ export default function App(){
   const generator=useRef(d.generate);
   generator.current=d.generate;
   useEffect(()=>{
-    if(!s.session||!s.settings.auto||!d.visible) return;
-    const timer=setInterval(()=>void generator.current(busy),s.settings.interval*1000);
-    return ()=>clearInterval(timer);
-  },[s.session,s.settings.auto,s.settings.interval,d.visible]);
-  useEffect(()=>{
-    if (!nav) return;
-    routeTick.current=0;
-    setActiveStep(0);
-    setRoute(null);
-  },[nav,target?.point.source,routeRetry]);
-  useEffect(()=>{
-    if(!nav||!target||!fix) return;
-    if(routeTick.current && Date.now()-routeTick.current<30000) return;
-    if (route && nearRoute(fix,route.points)) return;
-    const adapter=d.routeAdapter();
-    if(!adapter){setRouteError('Routing ist offline oder nicht freigegeben. Externe Navigation ist verfügbar.');return;}
-    routeTick.current=Date.now();
-    setRouteError('Straßenroute wird berechnet …');
-    const token=routeTick.current;
-    void adapter(fix,target.point).then(result=>{
-      if(routeTick.current!==token)return;
-      setRoute(result);setActiveStep(0);setRouteError('');
-    }).catch(()=>{
-      if(routeTick.current!==token)return;
-      setRouteError('Straßenroute momentan nicht verfügbar. Nutze Google Maps oder berechne erneut.');
-    });
-  },[nav,target?.point.source,fix?.at,s.settings.routing,s.settings.routingUrl,d.online,routeRetry]);
-  useEffect(()=>{
-    if(!nav||!route||!fix||route.steps.length<2) return;
-    const next=route.steps[activeStep+1];
-    if(next && distance(fix,next)<35) setActiveStep(i=>i+1);
-  },[fix?.at,route,nav]);
+    if(!available(s)||!s.settings.auto||!d.visible||overlay||nav) return;
+    let ended=false;
+    let timer:ReturnType<typeof setTimeout>;
+    const schedule=()=>{
+      timer=setTimeout(async()=>{
+        await generator.current(busy);
+        if(!ended)schedule();
+      },offerDelay(s.settings));
+    };
+    schedule();
+    return ()=>{ended=true;clearTimeout(timer);};
+  },[s.session,s.active?.id,s.availability,s.meter.status,s.settings.auto,s.settings.interval,s.settings.intervalMin,s.settings.intervalMax,d.visible,overlay,nav]);
   function stepTutorial(step:number) {
     d.update(v=>({...v,tutorial:step>0&&step<=10?step:0}));
   }
@@ -228,10 +203,9 @@ export default function App(){
     if (!target) return;
     if (s.settings.navigation==='google') {window.open(googleMaps(target.point),'_blank','noopener,noreferrer');return;}
     setNav(true);
-    setRouteError(fix?'Straßenroute wird berechnet …':'Interne Navigation wartet auf ein genaues GPS-Signal.');
     navigate('/karte');
   }
-  function stopNav(){setNav(false);routeTick.current=0;setRoute(null);setRouteError('');}
+  function stopNav(){setNav(false);}
   const startup = () => {unlockAudio();d.update(v=>({...v,session:true}));setWelcome(false);navigate('/');};
   const logout = () => {
     if(s.active||s.meter.status!=='frei'){d.setNotice('Laufenden Auftrag oder Taxameter zuerst beenden.');return;}
@@ -244,7 +218,7 @@ export default function App(){
   return <div className="app" data-theme={s.settings.theme} data-highlight={tutorialAnchor} onPointerDown={unlockAudio}>
     <header className="topbar"><Brand/><div className="top-right"><strong>{clock(now)}</strong><small>{profile.code} · {d.online?'Online':'Offline'}</small></div></header>
     {d.simulated&&<p className="alert">Entwicklermodus · künstliche GPS-Position</p>}
-    <main className="content" inert={!!tutorial||idle}>
+    <main className="content" inert={!!tutorial||idle||nav}>
       {d.problem&&<p className="alert" role="alert">{d.problem}</p>}
       {pathname==='/'&&<>
         <Title tag={date(now)} title="Fahrtbetrieb"/>
@@ -276,11 +250,11 @@ export default function App(){
         <Title tag="LOKALER AUFTRAGSBETRIEB" title="Aufträge"/>
         <section data-anchor="orders">
           {job?<div className="panel">
-            <p className="eyebrow">{orderLabels[job.status]}</p><JobSummary job={job}/>
-            <p className="subtle">{job.comment} · {job.id}</p>
-            <div className="stack">
-              <button className="button primary" onClick={openNav}><Navigation size={18}/> Navigation starten</button>
-              {target&&<a className="button" href={googleMaps(target.point)} target="_blank" rel="noreferrer">Mit Google Maps navigieren</a>}
+            <p className="eyebrow">{orderLabels[job.status]}</p>
+            <h2 className="active-customer">{job.customer}</h2>
+            <p className="active-pickup">{target?.label}</p>
+            <button className="button primary full navigate-button" onClick={openNav}><Navigation size={27}/> Navigieren</button>
+            <div className="stack job-actions">
               {job.status==='anfahrt'&&<button className="button accept" onClick={()=>{if(d.transition('kunde'))stopNav();}}>Am Kunden</button>}
               {job.status==='kunde'&&<button className="button accept" onClick={()=>d.transition('besetzt')}>Fahrgast aufgenommen</button>}
               {job.status==='besetzt'&&<><button className="button" onClick={()=>navigate('/taxameter')}>Taxameter öffnen</button>
@@ -289,34 +263,23 @@ export default function App(){
             </div>
           </div>:<div className="panel empty"><ClipboardList size={32}/><h2>Kein aktiver Auftrag</h2><p>Aufträge werden auf diesem Gerät erzeugt.</p><button className="button primary" disabled={!available(s)||d.generating} onClick={()=>void d.generate(busy,true)}>{d.generating?'Abholort wird geprüft …':'Testauftrag anfragen'}</button>
           {s.settings.filter&&!s.settings.routing&&<p className="subtle"><NavLink to="/menue#navigation">Routing für den Anfahrtsfilter freigeben</NavLink></p>}</div>}
+          {job&&<details className="panel job-details"><summary>Auftragsdetails</summary><JobSummary job={job}/><p className="subtle">{job.comment} · {job.id}</p></details>}
           <div className="section-title"><h2>Verlauf</h2></div>
           {s.history.length?s.history.map(item=><button className="sector-row" key={item.id} onClick={()=>setHistoryJob(item)}><span><strong>{item.customer}</strong><small>{item.pickup.label}</small></span><span className="pill">{orderLabels[item.status]}</span></button>):<p className="subtle">Noch keine gespeicherten Aufträge.</p>}
         </section>
       </>}
       {pathname==='/karte'&&<>
-        <Title tag={nav?'ROUTENFÜHRUNG':'OPENSTREETMAP'} title={nav?'Navigation':'Karte'}/>
+        <Title tag="OPENSTREETMAP" title="Karte"/>
         <section data-anchor="map">
-          <StreetMap fix={fix} radius={s.settings.radius} selected={s.sector} job={job} trip={nav?route:job?.initialRoute} onSector={selectSector} online={d.online}/>
-          {nav&&target&&<div className="panel route-panel">
-            <h2>{target.label}</h2>
-            {job?.destination&&<div className="quick-actions">
-              <button className="button" aria-pressed={target===job.pickup} onClick={()=>setNavTarget('abholung')}>Zur Abholung</button>
-              <button className="button" aria-pressed={target===job.destination} onClick={()=>setNavTarget('ziel')}>Zum Fahrtziel</button>
-            </div>}
-            {route&&<><p>{metresLabel(route.distance)} · ca. {Math.ceil(route.duration/60)} Min.</p>
-              {route.steps.length>0&&<ol className="turns" start={activeStep+1}>{route.steps.slice(activeStep,activeStep+4).map((step,i)=><li key={i}>{step.label}</li>)}</ol>}</>}
-            {routeError&&<p role="status">{routeError}</p>}
-            <p className="subtle">Die App für die GPS-Navigation geöffnet lassen.</p>
-            <div className="stack"><button className="button" onClick={()=>setRouteRetry(i=>i+1)}>Route neu berechnen</button>
-            <a className="button" href={googleMaps(target.point)} target="_blank" rel="noreferrer">Mit Google Maps navigieren</a>
-            <button className="button danger" onClick={stopNav}>Navigation beenden</button></div>
-          </div>}
+          <StreetMap fix={fix} radius={s.settings.radius} selected={s.sector} job={job} onSector={selectSector} online={d.online}/>
+          {job&&<button className="button primary full navigate-button" onClick={openNav}><Navigation size={24}/> Navigieren</button>}
         </section>
       </>}
       {pathname==='/taxameter'&&<MeterPage d={d}/>}
       {pathname==='/menue'&&<Preferences d={d} tutorial={()=>stepTutorial(1)} logout={logout}/>}
     </main>
-    <nav className="tabs" aria-label="Hauptnavigation" inert={!!tutorial||idle}>{tabs.map(([to,label,Icon])=><NavLink key={to} end to={to}><Icon size={21}/><span>{label}</span></NavLink>)}</nav>
+    <nav className="tabs" aria-label="Hauptnavigation" inert={!!tutorial||idle||nav}>{tabs.map(([to,label,Icon])=><NavLink key={to} end to={to}><Icon size={21}/><span>{label}</span></NavLink>)}</nav>
+    {nav&&job&&<LiveNavigation d={d} job={job} onClose={()=>{stopNav();navigate('/auftraege');}} onArrive={()=>{if(d.transition('kunde')){stopNav();navigate('/auftraege');}}}/>}
     {idle&&!offer&&<DriverScreen idle now={now} go={()=>setIdle(false)}/>}
     {d.notice&&<div className="toast" role="status">{d.notice}</div>}
     {selected&&<Dialog label={selected.name} onClose={()=>setSectorId(null)}>
@@ -333,7 +296,7 @@ export default function App(){
       <JobSummary job={offer}/>
       {details?<p className="panel">{offer.comment}. Auftragsnummer {offer.id}</p>:<StreetMap fix={fix} radius={s.settings.radius} job={offer} trip={offer.initialRoute} compact online={d.online}/>}
       <div className="offer-actions">
-        <button className="button accept" onClick={()=>{if(d.transition('anfahrt'))navigate('/auftraege');}}>Annehmen</button>
+        <button className="button accept" onClick={()=>{if(d.transition('anfahrt')){window.scrollTo(0,0);navigate('/auftraege');}}}>Annehmen</button>
         <button className="button" onClick={()=>setDetails(v=>!v)}>{details?'Karte':'Details'}</button>
         <button className="button danger" onClick={()=>d.transition('abgelehnt','Manuell abgelehnt')}>Ablehnen</button>
       </div>

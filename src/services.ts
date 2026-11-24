@@ -1,4 +1,5 @@
 import { distance, passesFilter, pickups, profile, sectors, snapshotSchema, type Fix, type Order, type Point, type Route, type Snapshot, type Settings } from './domain';
+import { routeLengths } from './navigation';
 
 const DATABASE = 'taxi-duisburg';
 export async function openStorage(factory = indexedDB) {
@@ -45,7 +46,11 @@ export async function openStorage(factory = indexedDB) {
 
 export type RoutingAdapter = (start:Point, end:Point) => Promise<Route>;
 export const demoRouting = 'https://routing.openstreetmap.de/routed-car/route/v1/driving';
-type OSRMStep = {name:string; distance:number; maneuver:{ type:string; modifier?:string; location:[number,number]}};
+type OSRMStep = {
+  name:string; distance:number; duration:number; geometry:{coordinates:[number,number][]};
+  maneuver:{type:string; modifier?:string; location:[number,number]; exit?:number};
+  intersections?:{lanes?:{valid:boolean;indications:string[]}[]}[];
+};
 type OSRMRoute = {distance:number; duration:number; geometry:{coordinates:[number,number][]}; legs:{steps:OSRMStep[]}[]};
 const directions:Record<string,string> = {
   left:'links', right:'rechts', 'slight left':'leicht links', 'slight right':'leicht rechts',
@@ -85,11 +90,19 @@ export function osrm(endpoint = demoRouting):RoutingAdapter {
       if (!result || result.geometry.coordinates.length<2) throw new Error('Keine Straßenroute verfügbar.');
       const points = result.geometry.coordinates.map(([lon,lat])=>({lat,lon}));
       if (distance(start,points[0])>150 || distance(end,points.at(-1)!)>150) throw new Error('Keine nahegelegene befahrbare Straße gefunden.');
+      let offset=0;
       const trip:Route = {
         distance:result.distance, duration:result.duration, points,
         steps:result.legs.flatMap(leg=>leg.steps.map(step=>{
           const [lon,lat] = step.maneuver.location;
-          return {lat,lon,distance:step.distance,label:instruction(step)};
+          const start=offset;
+          offset+=routeLengths(step.geometry.coordinates.map(([x,y])=>({lat:y,lon:x}))).at(-1)??0;
+          return {
+            lat,lon,distance:step.distance,label:instruction(step),duration:step.duration,
+            street:step.name,type:step.maneuver.type,modifier:step.maneuver.modifier,
+            exit:step.maneuver.exit,offset:start,
+            lanes:step.intersections?.find(intersection=>intersection.lanes?.length)?.lanes,
+          };
         })),
       };
       if (cached.size >= 60) cached.delete(cached.keys().next().value!);

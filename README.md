@@ -2,6 +2,8 @@
 
 Deutschsprachige Fahrer-PWA für Safari auf dem iPhone. Die App erzeugt und verarbeitet lokale Testaufträge. Der Fahrer-Code **5803** wählt das hinterlegte Profil von Justin Danes aus. Eine echte Taxizentrale oder Serveranmeldung ist nicht angebunden.
 
+Nach der Auftragsannahme öffnet die große Schaltfläche **Navigieren** die eingestellte Navigation. Intern arbeitet sie bildschirmfüllend mit einer dem GPS folgenden, nach Norden ausgerichteten Karte, ausgerichtetem Fahrzeugpfeil, nächstem Manöver, Restweg und geschätzter Ankunft. Verschieben der Karte pausiert die Kameraführung, die Zentrieren-Schaltfläche aktiviert sie wieder. GPS-Abweichungen lösen bei mehreren Messungen eine neue Route aus. Sprachhinweise und Bildschirm-Wachhaltung verwenden verfügbare Browserfunktionen. Spurempfehlungen erscheinen ausschließlich aus gelieferten Routingdaten. Verkehrsprognosen und Geschwindigkeitsbegrenzungen sind nicht enthalten. Unter **Menü › Aufträge** lassen sich zufällige Angebotsabstände von 10–20 Sekunden bis 5–10 Minuten auswählen. Gespeicherte feste Intervalle bleiben bis zur neuen Auswahl gültig.
+
 ## Lokal starten
 
 Node.js 22 oder neuer verwenden.
@@ -17,6 +19,8 @@ npm run preview
 Der Inhalt von `dist/` kann auf einem statischen HTTPS-Host liegen. `localhost` erlaubt für lokale Tests Standortzugriff und Service Worker. Für ein iPhone im gleichen WLAN braucht der Host HTTPS mit einem vom Gerät anerkannten Zertifikat. Die GPS-Simulation erscheint ausschließlich bei `npm run dev`.
 
 Bei laufender Produktionsvorschau führt `npm run test:browser` den Fahrerablauf in Microsoft Edge mit 390 × 844 CSS-Pixeln und einer testseitigen GPS-Position durch. Der Browser lässt sich über `TAXI_BROWSER_CHANNEL` wählen. Der Test prüft auch den Offline-Neustart und legt Screenshots unter `.work/` ab.
+
+`npm run test:navigation` prüft den Navigationsstart ohne Scrollen, gespeicherte Zeitspannen, den Fortschritt und Manöverwechsel bei GPS-Bewegung sowie die Neuberechnung bei Abweichung. Routing und Positionen werden ausschließlich im Test simuliert.
 
 ## Auf dem iPhone installieren
 

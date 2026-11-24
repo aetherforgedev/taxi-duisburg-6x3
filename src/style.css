@@ -156,3 +156,57 @@ small,.subtle{color:var(--muted,#9eabad);font-size:.84rem}
 .app[data-highlight=status] [data-anchor=status],.app[data-highlight=gps] [data-anchor=gps],.app[data-highlight=sectors] [data-anchor=sectors],.app[data-highlight=orders] [data-anchor=orders],.app[data-highlight=map] [data-anchor=map],.app[data-highlight=meter] [data-anchor=meter],.app[data-highlight=settings] [data-anchor=settings]{outline:2px solid var(--turq);outline-offset:3px;border-radius:12px}
 .app[data-highlight] .content{padding-bottom:270px}
 @media(max-width:360px){.content{padding-inline:12px}.offer-actions .button{font-size:.82rem;padding-inline:5px}.status-card{padding:11px}.tabs a{font-size:.64rem}}
+.live-navigation{position:fixed;inset:0;z-index:9;height:100dvh;background:#dce2df;color:#152121;isolation:isolate;overflow:hidden}
+.live-navigation .navigation-map{position:absolute;inset:0;height:100%;border:0;border-radius:0}
+.live-navigation .map-center{top:auto;bottom:calc(235px + env(safe-area-inset-bottom));right:14px;width:auto;min-width:48px;padding:10px;background:#fff;color:#153c38;border:0;box-shadow:0 3px 12px #0003;gap:6px}
+.live-navigation .map-center.follow-off{display:flex}
+.live-navigation .tile-state{bottom:calc(200px + env(safe-area-inset-bottom));max-width:calc(100% - 90px)}
+.live-navigation .leaflet-control-attribution{font-size:10px;max-width:100vw}
+.navigation-banner{position:absolute;top:calc(12px + env(safe-area-inset-top));left:12px;right:12px;display:grid;grid-template-columns:52px minmax(0,1fr) 38px;gap:9px;background:#112d2b;color:#fff;padding:16px 12px;border-radius:20px;box-shadow:0 5px 22px #0003}
+.maneuver-icon{color:#71f0cc;display:grid;place-items:start center;padding-top:3px}
+.navigation-banner .icon-btn{min-width:36px;min-height:36px;width:36px;height:36px;background:#ffffff12;border:0;color:#fff}
+.turn-distance{font-size:1.55rem;font-variant-numeric:tabular-nums;color:#91f2d3}
+.maneuver-copy h1{font-size:1.45rem;line-height:1.15;letter-spacing:-.035em;margin:4px 0;overflow-wrap:anywhere}
+.maneuver-copy p{font-size:.88rem;color:#c4dad4;line-height:1.2}
+.next-maneuver{grid-column:1/-1;display:flex;align-items:center;gap:12px;border-top:1px solid #ffffff24;padding:10px 3px 0;font-size:.88rem}
+.next-maneuver span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.next-maneuver svg{flex:none}
+.lane-guidance{grid-column:1/-1;display:flex;justify-content:center;gap:20px;font-size:1.7rem;color:#697e7c}
+.lane-guidance .valid{color:#a5f6d9}
+.navigation-side{position:absolute;right:14px;top:45%;display:grid;gap:10px}
+.navigation-side .icon-btn,.north-indicator{background:#fff;color:#153c38;border:0;border-radius:50%;width:46px;height:46px;box-shadow:0 3px 12px #0002}
+.north-indicator{display:grid;place-items:center;font-size:.9rem;font-weight:750}
+.navigation-vehicle{border:3px solid #fff;box-shadow:0 2px 8px #0007;background:#153c38}
+.navigation-vehicle span{font-size:31px;color:#fff;transition:transform .4s linear}
+.navigation-speed{position:absolute;left:14px;bottom:calc(235px + env(safe-area-inset-bottom));display:grid;text-align:center;background:#fff;border:1px solid #bdceca;border-radius:14px;padding:8px 11px;box-shadow:0 2px 10px #0002}
+.navigation-speed b{font-size:1.55rem;font-variant-numeric:tabular-nums}
+.navigation-speed small{color:#49605c;font-size:.7rem}
+.navigation-bottom{position:absolute;left:10px;right:10px;bottom:calc(19px + env(safe-area-inset-bottom));background:#fff;border:1px solid #d4dfdb;border-radius:21px;padding:13px 15px;box-shadow:0 2px 18px #0003;max-height:44dvh;overflow:auto}
+.navigation-eta{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.navigation-eta>strong{font-size:1.9rem;letter-spacing:-.06em;color:#0a6756}
+.navigation-eta>span{text-align:right;font-size:1.1rem;font-weight:700;font-variant-numeric:tabular-nums}
+.navigation-eta small{display:block;font-size:.78rem;font-weight:500;color:#596d68;margin-top:2px}
+.navigation-target{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.86rem;color:#526a64;margin:5px 0 9px}
+.navigation-footer{display:flex;gap:7px;border-top:1px solid #dbe4e1;padding-top:9px}
+.navigation-footer .button{flex:1;min-height:40px;font-size:.86rem}
+.live-navigation .button{--fg:#153c38;--line:#d6e1dd;--panel2:#eef3f0}
+.live-navigation .button.primary{color:#132421}
+.navigation-message{font-size:.86rem;margin-bottom:8px;color:#77420c}
+.current-street{position:absolute;bottom:calc(215px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);max-width:65%;background:#fff;color:#203b36;padding:5px 11px;border-radius:20px;box-shadow:0 2px 10px #0002;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-size:.8rem}
+.navigation-directions{position:absolute;inset:calc(12px + env(safe-area-inset-top)) 12px calc(24px + env(safe-area-inset-bottom));background:#fff;border-radius:20px;padding:16px;overflow:auto;box-shadow:0 2px 20px #0005}
+.navigation-directions .section-title{margin-top:0}
+.navigation-directions .icon-btn{background:#edf3f0;color:#153c38;border:0}
+.direction-row{display:flex;gap:15px;align-items:center;padding:14px 0;border-bottom:1px solid #dbe4df}
+.direction-row>svg{flex:none;color:#0a6756}
+.direction-row small{display:block;margin-top:4px;color:#5f736e}
+.roundabout-arrow{display:inline-flex;position:relative;font-size:2.5rem;line-height:1}
+.roundabout-arrow small{color:inherit;position:absolute;inset:12px 0 0;font-size:.8rem;text-align:center}
+.navigate-button{min-height:80px;font-size:1.4rem;border-radius:17px}
+.active-customer{font-size:1.5rem;margin-top:5px}
+.active-pickup{font-size:1rem;margin:5px 0 10px!important}
+.job-actions{margin-top:12px}
+.job-details{margin-top:10px}
+.job-details summary{cursor:pointer;font-weight:700}
+@media(min-width:800px){.navigation-banner{max-width:470px}.navigation-bottom{left:50%;transform:translateX(-50%);width:480px}.navigation-speed{bottom:230px}.current-street{bottom:210px}}
+@media(max-height:650px){.navigation-banner{padding:10px;gap:5px}.maneuver-copy p{display:none}.turn-distance{font-size:1.25rem}.maneuver-copy h1{font-size:1.1rem}.navigation-bottom{padding:9px 12px}.navigation-eta>strong{font-size:1.5rem}.next-maneuver{padding-top:5px}}
+.navigation-vehicle{transition:transform .6s linear}

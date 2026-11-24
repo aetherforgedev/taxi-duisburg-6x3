@@ -1,6 +1,6 @@
 {
   "name": "taxi-duisburg-6x3",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,7 +9,8 @@
     "test": "vitest run",
     "build": "tsc --noEmit && vite build && node scripts/sw.mjs",
     "preview": "vite preview",
-    "test:browser": "node scripts/smoke.cjs"
+    "test:browser": "node scripts/smoke.cjs",
+    "test:navigation": "node scripts/navigation-smoke.cjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
